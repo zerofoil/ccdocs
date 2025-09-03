@@ -1,6 +1,6 @@
-- [x] Member
-- [x] Cooldown
-- [x] Request
+- [ ] Member
+- [ ] Cooldown
+- [ ] Request
 - [ ] Bot
 - [ ] Channel
 - [ ] Date
@@ -17,3 +17,9 @@
 - [ ] Timeout
 - [ ] Useful
 - [ ] Variables
+
+- [ ] Contribute
+- [ ] Guide
+- [ ] Info
+- [ ] Triggers
+- [ ] Tutorials

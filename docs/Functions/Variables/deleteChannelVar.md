@@ -1,16 +1,38 @@
 # $deleteChannelVar
-Deletes a channel variable, from the command trigger channel or from the ID specified.
 
-#### Usage: `$deleteChannelVar[variable;channelID(optional)]`
 <br/>
-<discord-messages>
-	<discord-message :bot="false" role-color="#ffcc9a" author="Member">
-		!!exec $deleteChannelVar[Creator]
-	</discord-message>
-</discord-messages>
+
+Deletes a channel variable.
+
+## Arguments
+
+```php
+$deleteChannelVar[variable;channelID]
+```
+- **`variable`** - Variable name to delete.
+- **`channelID`** - (Optional) Default value: `$channelID`. ID of the channel you want to remove variable from.
+
+## Example
+
+<Discord>
+    <UserMessage>
+        !!exec Before: $getChannelVar[money]
+        <br/>
+        $deleteChannelVar[money]
+        <br/>
+        After: $getChannelVar[money]
+    </UserMessage>
+    <BotMessage>
+        Before: 10
+        <br/>
+        After: undefined
+    </BotMessage>
+</Discord>
+
+<br/>
 
 ::: tip Related Functions
-Check out: [$setChannelVar](../Variables/setChannelVar.md)
+Check out: [$setChannelVar](../Functions/Variables/setChannelVar)
 
-Check out: [$getChannelVar](../Variables/getChannelVar.md)
+Check out: [$getChannelVar](../Functions/Variables/getChannelVar)
 :::

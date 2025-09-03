@@ -6,7 +6,7 @@ This guide outlines how to contribute to the project documentation.  We apprecia
 
 Please adhere to the following guidelines when contributing:
 
-*   **Use the Template:**  A template ensures consistency across all function documentation. You can find the template [here](./function_template.md).
+*   **Use the Template:**  A template ensures consistency across all function documentation. You can find the template [here](./template).
 *   **Clear and Correct English:**  Please use proper English grammar and spelling. Avoid slang and profanity.
 *   **Descriptive Pull Requests:** When submitting a pull request, clearly explain the changes you've made in the title and description.  Be specific about what you've added, modified, or removed.
 *   **Document What You Know:**  Only document functions you are familiar with.  Accuracy is paramount.  Double-check your work to avoid introducing errors.
@@ -37,7 +37,7 @@ Here's a step-by-step guide to adding documentation for a function that doesn't 
     *   _Example: Create a file named `botCount.md`._
     ![](https://i.ibb.co/BLCbs7q/image.png)
 
-4.  **Use the Template and Populate It:** Use the [template](./function_template.md) as a starting point. Fill in the template with accurate and detailed information about the function.  You can also refer to existing function documentation files for inspiration.
+4.  **Use the Template and Populate It:** Use the [template](./template) as a starting point. Fill in the template with accurate and detailed information about the function.  You can also refer to existing function documentation files for inspiration.
     ![](https://i.ibb.co/X5M0s01/image.png)
 
 5.  **Save and Commit:**  Save your changes and commit them to your forked repository with a descriptive commit message.

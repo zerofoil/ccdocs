@@ -1,4 +1,5 @@
 # $abbreviate
+
 this function abbreviates large numbers
 Abbreviation to:
 * k - thousands
