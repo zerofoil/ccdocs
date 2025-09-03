@@ -1,48 +1,43 @@
-@font-face {
-    font-family: 'Assistant-Medium';
-    src: url('/fonts/Assistant-Medium.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: 'Noto-Sans-Medium';
-    src: url('/fonts/NotoSans-Medium.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* WHOLE DISCORD MESSAGES COMPONENT */
 .discord-messages {
     color: #747f8d !important;
     background-color: #f7f7f7 !important;
     border-color: #dedede !important;
 }
-.discord-message {
-    color: black !important;
-}
-
 html.dark .discord-messages {
     background-color: #202020 !important;
     border: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
-html.dark .discord-message {
-    color: #fff !important;
-}
+.discord-messages, .discord-messages * { font-family: 'Assistant', sans-serif !important; }
 
-.discord-messages,
-.discord-messages * {
-    font-family: 'Assistant-Medium', sans-serif !important;
-}
+/* EVERYTHING INSIDE OF DISCORD MESSAGES */
+.discord-message { color: black !important; }
+html.dark .discord-message { color: #fff !important; }
+
+/* USERNAME */
 .discord-message .discord-author-info .discord-author-username {
-    font-family: 'Noto-Sans-Medium', sans-serif !important;
+    font-family: 'Noto Sans', sans-serif !important;
     font-size: 0.95rem !important;
     letter-spacing: 0px !important;
     display: inline-flex !important;
 }
-.discord-message .discord-message-body {
-    font-size: 15px !important;
-}
+
+/* USERNAME AND TEXT MESSAGE */
+.discord-message .discord-message-body { font-size: 15px !important; }
+
+/* TIMESTAMP */
 .discord-message .discord-message-content .discord-message-timestamp {
     display: inline-flex !important;
     font-size: 11px !important;
     margin-left: 5px !important;
+}
+
+/* HOVER */
+html.dark .discord-message:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.discord-message:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
 }

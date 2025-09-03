@@ -2,21 +2,17 @@
 
 Clears a cooldown set by cooldown function.
 
-**Type:** Clears or resets a pre-existing cooldown.
-
 ## Usage
 
 ```php
 $clearCooldown[type;id]
 ```
-1. **type** - (Optional) default value: `user`. Can be `user`, `channel` or `server`. The type of cooldown to clear.
-2. **id** - (Optional) default value: `$authorID` if type is user. The ID of a user or channel to clear cooldown from.
+- **`type`** - (Optional) default value: `user`. Can be `user`, `channel` or `server`. The type of cooldown to clear.
+- **`id`** - (Optional) default value: `$authorID` if type is user. The ID of a user or channel to clear cooldown from.
 
 ## Example
 
-#### Remove cooldown from a user
-
-How to remove cooldown from a user
+Removing cooldown from user
 
 <discord-messages>
     <discord-message :bot="false" role-color="#d6e0ff" author="User" avatar="https://cdn.discordapp.com/embed/avatars/0.png">
@@ -36,13 +32,6 @@ How to remove cooldown from a user
         No cooldown 2nd try
     </discord-message>
 </discord-messages>
-
-> [!NOTE] w
-> idk
-
-::: tip test
-awd
-:::
 
 ##### Related functions: [$getCooldownTime](../Cooldown/getCooldownTime.md)
 

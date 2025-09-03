@@ -1,3 +1,3 @@
 <template>
-    <Badge type="danger" text="Hard" vertical="middle"/>
+    <Badge type="danger" text="Hard"/>
 </template>

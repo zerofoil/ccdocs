@@ -1,3 +1,10 @@
 <template>
-    <Badge type="tip" text="Easy" vertical="middle"/>
+    <Badge type="easy" text="Easy"/>
 </template>
+
+<style>
+.VPBadge.easy {
+    color: rgba(100, 255, 100, 1);
+    background-color: rgba(100, 255, 100, 0.16);
+}
+</style>

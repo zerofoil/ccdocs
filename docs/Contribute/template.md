@@ -1,33 +1,35 @@
 ---
 title: Documentation Template
 ---
+
 # $functionName
 
-Short description of the function
+<br/>
 
-## Usage
+Short description of the function, what does the function do?
 
-```bash
+## Arguments
+
+```php
 $functionName[arguments]
 ```
-1. **arguments** - (Optional)? default value: `value`. Argument description
+
+- **`arguments`** - (Optional)? Default value: `value`. Argument description here.
 
 ## Example
 
-#### Using $boostingSince
+What does this example show?
 
-Describe example
+<Discord>
+    <UserMessage>
+        !!exec This is example command
+    </UserMessage>
+    <BotMessage>
+        This is example command
+    </BotMessage>
+</Discord>
 
-<discord-messages>
-    <discord-message :bot="false" role-color="#d6e0ff" author="User" avatar="https://cdn.discordapp.com/embed/avatars/0.png">
-        user message
-    </discord-message>
-    <discord-message :bot="true" role-color="#5fb0fa" author="Custom Command" avatar="https://doc.ccommandbot.com/bot-profile.png">
-        bot response
-    </discord-message>
-</discord-messages>
+<br/>
 
-##### Related functions: [$formatDate](../Date/formatDate.md) [$timeToDate](../Date/timeToDate.md)
-
-##### Function difficulty: <Badge type="warning" text="Medium" vertical="middle"/>
-###### Tags: <Badge type="tip" text="boosting" vertical="middle"/> <Badge type="tip" text="time" vertical="middle"/> <Badge type="tip" text="timestamp" vertical="middle"/>
+##### Related functions: <Related text="$formatDate" url="../Functions/Date/formatDate"/> <Related text="$timeToDate" url="../Functions/Date/timeToDate"/>
+##### Function difficulty: <Easy/>

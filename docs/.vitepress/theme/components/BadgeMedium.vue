@@ -1,3 +1,3 @@
 <template>
-    <Badge type="warning" text="Medium" vertical="middle"/>
+    <Badge type="warning" text="Medium"/>
 </template>

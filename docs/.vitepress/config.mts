@@ -14,17 +14,6 @@ const quickAccess = {
 import { defineConfig } from "vitepress";
 import { withSidebar } from "vitepress-sidebar";
 
-//import { createHighlighter } from "shiki";
-//import cclang from "./theme/langs/cclang.json";
-//
-//const cclanguage = await createHighlighter({
-//    langs: [
-//        cclang
-//    ],
-//    themes: []
-//});
-
-
 const vitePressConfig = {
     title: quickAccess["docs_title"],
     description: quickAccess["desc"],
@@ -54,8 +43,8 @@ const vitePressConfig = {
     }, 
     markdown: {
         theme: {
-            light: "houston",
-            dark: "houston"
+            light: "vitesse-light",
+            dark: "vitesse-dark"
         }
     },
 }
