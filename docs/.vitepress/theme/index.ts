@@ -25,7 +25,7 @@ const {
   DiscordMessage,
   DiscordMessages,
   DiscordReaction,
-  DiscordReactions
+  DiscordReactions,
   install: DiscordMessageComponents
 } = dc;
 
