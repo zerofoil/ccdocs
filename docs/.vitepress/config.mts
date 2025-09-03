@@ -13,6 +13,9 @@ const quickAccess = {
 
 import { defineConfig } from "vitepress";
 import { withSidebar } from "vitepress-sidebar";
+import { BundledTheme } from "shiki";
+const light: BundledTheme = "vitesse-light"
+const dark: BundledTheme = "vitesse-dark"
 
 const vitePressConfig = {
     title: quickAccess["docs_title"],
@@ -43,8 +46,8 @@ const vitePressConfig = {
     }, 
     markdown: {
         theme: {
-            light: "vitesse-light",
-            dark: "vitesse-dark"
+            light: light,
+            dark: dark
         }
     },
 }
