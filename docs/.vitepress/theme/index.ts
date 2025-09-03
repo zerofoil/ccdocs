@@ -12,21 +12,22 @@ import UserMessage from "./components/UserMessage.vue";
 import BotMessage from "./components/BotMessage.vue";
 import DiscordWrapper from "./components/DiscordWrapper.vue";
 
-import {
-	DiscordButton,
-	DiscordButtons,
-	DiscordEmbed,
-	DiscordEmbedField,
-	DiscordEmbedFields,
-	DiscordInteraction,
-	DiscordMarkdown,
-	DiscordMention,
-	DiscordMessage,
-	DiscordMessages,
-	DiscordReaction,
-	DiscordReactions,
-	install as DiscordMessageComponents,
-} from "@discord-message-components/vue";
+import dc from "@discord-message-components/vue";
+const {
+  DiscordButton,
+  DiscordButtons,
+  DiscordEmbed,
+  DiscordEmbedField,
+  DiscordEmbedFields,
+  DiscordInteraction,
+  DiscordMarkdown,
+  DiscordMention,
+  DiscordMessage,
+  DiscordMessages,
+  DiscordReaction,
+  DiscordReactions
+  install: DiscordMessageComponents
+} = dc;
 
 import "@discord-message-components/vue/dist/style.css";
 

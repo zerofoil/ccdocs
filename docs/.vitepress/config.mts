@@ -18,6 +18,8 @@ const light: BundledTheme = "vitesse-light"
 const dark: BundledTheme = "vitesse-dark"
 
 const vitePressConfig = {
+    ignoreDeadLinks: true,
+    
     title: quickAccess["docs_title"],
     description: quickAccess["desc"],
     themeConfig: {
