@@ -1,0 +1,19 @@
+- [x] Member
+- [x] Cooldown
+- [x] Request
+- [ ] Bot
+- [ ] Channel
+- [ ] Date
+- [ ] Events
+- [ ] Image
+- [ ] Interaction
+- [ ] Message
+- [ ] Random
+- [ ] Role
+- [ ] Server
+- [ ] Stickers
+- [ ] Text
+- [ ] Threads
+- [ ] Timeout
+- [ ] Useful
+- [ ] Variables

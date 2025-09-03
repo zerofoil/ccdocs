@@ -1,0 +1,16 @@
+{
+    "name": "cc",
+    "displayName": "cclang",
+    "scopeName": "source.cc",
+    "patterns": [
+        {
+            "name": "function.cc",
+            "match": "\\$\\w+"
+        },
+        {   
+            "name": "brackets.cc",
+            "match": "[\\{\\}\\(\\)\\[\\]]"
+        }
+    ],
+    "repository": {}
+}
