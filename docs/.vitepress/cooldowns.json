@@ -1,0 +1,7 @@
+{
+    "$clearCooldown": {
+        "type": "channeluser",
+        "time": "2s, will wait on cooldown",
+        "per": "User, across servers"
+    }
+}

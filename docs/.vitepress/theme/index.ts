@@ -2,18 +2,24 @@ import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 
 import "./styles/styles.scss";
-import BadgeEasy from "./components/BadgeEasy.vue";
-import BadgeMedium from "./components/BadgeMedium.vue";
-import BadgeHard from "./components/BadgeHard.vue";
-import BadgeDeprecated from "./components/BadgeDeprecated.vue";
-import BadgeRelated from "./components/BadgeRelated.vue";
 
-import UserMessage from "./components/UserMessage.vue";
-import BotMessage from "./components/BotMessage.vue";
-import DiscordWrapper from "./components/DiscordWrapper.vue";
+import {
+    BadgeEasy,
+    BadgeMedium,
+    BadgeHard,
+    BadgeDeprecated,
+    BadgeRelated,
+    BadgePremium,
+    BadgeNormal,
 
-import dc from "@discord-message-components/vue";
-const {
+    DiscordWrapper,
+    UserMessage,
+    BotMessage,
+} from "./components";
+
+import Cooldowns from "./Cooldowns.vue";
+
+import {
   DiscordButton,
   DiscordButtons,
   DiscordEmbed,
@@ -26,8 +32,8 @@ const {
   DiscordMessages,
   DiscordReaction,
   DiscordReactions,
-  install: DiscordMessageComponents
-} = dc;
+  //DiscordMessageComponents
+} from "@discord-message-components/vue";
 
 import "@discord-message-components/vue/dist/style.css";
 
@@ -35,7 +41,7 @@ export default {
     extends: DefaultTheme,
     enhanceApp({ app }) {
         // Discord conmponents
-        app.use(DiscordMessageComponents, {});
+        //app.use(DiscordMessageComponents, {});
         app.component("DiscordButton", DiscordButton);
         app.component("DiscordButtons", DiscordButtons);
         app.component("DiscordEmbed", DiscordEmbed);
@@ -55,9 +61,13 @@ export default {
         app.component("Hard", BadgeHard);
         app.component("Deprecated", BadgeDeprecated);
         app.component("Related", BadgeRelated);
+        app.component("Premium", BadgePremium);
+        app.component("Normal", BadgeNormal);
 
         app.component("UserMessage", UserMessage);
         app.component("BotMessage", BotMessage);
-        app.component("Discord", DiscordWrapper)
+        app.component("Discord", DiscordWrapper);
+
+        app.component("Cooldown", Cooldowns);
     }
 } satisfies Theme

@@ -1,5 +1,6 @@
 ---
 layout: doc
+order: 1
 ---
 
 # Getting Started

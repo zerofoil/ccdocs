@@ -23,3 +23,4 @@
 - [ ] Info
 - [ ] Triggers
 - [ ] Tutorials
+  - [x] Ping Command

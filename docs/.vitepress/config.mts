@@ -66,10 +66,8 @@ const sidebarOptions = {
     underscoreToSpace: true,
     capitalizeFirst: true,
 
-
-    //sortMenusByName: true,
     useFolderTitleFromIndexFile: true,
-    sortMenusByFrontmatterOrder: true,
+    sortMenusByFrontmatterOrder: true
 }
 
 export default defineConfig(

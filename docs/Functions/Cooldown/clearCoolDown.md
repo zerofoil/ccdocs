@@ -33,7 +33,7 @@ Removing cooldown from user
     </discord-message>
 </discord-messages>
 
-##### Related functions: [$getCooldownTime](../Cooldown/getCooldownTime.md)
+<Cooldown/>
 
+##### Related functions: [$getCooldownTime](../Cooldown/getCooldownTime.md)
 ##### Function difficulty: <Easy/>
-###### Tags: <Badge type="tip" text="Cooldown" vertical="middle"/> <Badge type="tip" text="Clear Cooldown" vertical="middle"/>
