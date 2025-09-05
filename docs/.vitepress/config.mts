@@ -18,7 +18,7 @@ const light: BundledTheme = "vitesse-light"
 const dark: BundledTheme = "vitesse-dark"
 
 const vitePressConfig = {
-    base: "/",
+    base: "/ccdoc/",
     vite: { ssr: { noExternal: ['@discord-message-components/vue'] } },
     ignoreDeadLinks: true,
     
