@@ -1,4 +1,4 @@
-const base = "/ccdoc/"
+const base = "/ccdocs/"
 const quickAccess = {
     // Likely to edit
     docs_title: "Custom Command",
