@@ -17,7 +17,7 @@ First step every time is to create a new custom command. [Here's a step-by-step 
 Second step is to set your trigger properly. We will be using [`word`](../Triggers/2-word.md) trigger.
 
 Currently, you should see this at your screen:
-<Pic src="images/tutorials/ping/1.png"/>
+<Pic src="/images/tutorials/ping/1.png"/>
 
 Let's zoom on trigger options:
 <Pic src="/images/tutorials/ping/2.png"/>

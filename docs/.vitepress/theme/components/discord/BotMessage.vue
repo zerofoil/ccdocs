@@ -1,6 +1,12 @@
+<script setup>
+import { useData } from 'vitepress';
+const { base } = useData();
+const path = base.value + "bot-profile.png"
+</script>
+
 <template>
     <div class="discord-bot">
-        <discord-message :bot="true" role-color="#5fb0fa" author="Custom Command" avatar="bot-profile.png">
+        <discord-message :bot="true" role-color="#5fb0fa" author="Custom Command" :avatar="path">
             <slot></slot>
         </discord-message>
     </div>

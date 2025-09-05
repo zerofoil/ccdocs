@@ -8,10 +8,11 @@ const props = defineProps({
         required: true
     }
 });
-const image = props.src;
+const { isDark, base } = useData();
+
+const image = base.value + props.src;
 const dark = image.slice(0, -4) + "-dark.png";
 
-const { isDark } = useData();
 
 const img = computed(() => {
     return isDark.value ? dark : image;
