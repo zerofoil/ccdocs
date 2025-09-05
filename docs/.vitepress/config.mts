@@ -5,8 +5,8 @@ const quickAccess = {
     desc: "Discover clear, practical instructions to configure, command, and customize your Custom Command Bot documentation.",
 
     // Just in case
-    image: "/bot-profile.png",
-    icon: "/favicon.ico",
+    image: "bot-profile.png",
+    icon: "favicon.ico",
     discord_url: "https://ccommandbot.com/join",
     github_url: "https://github.com/raspdevpy/ccdoc",
 }

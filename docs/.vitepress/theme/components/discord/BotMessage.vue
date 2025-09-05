@@ -1,6 +1,6 @@
 <template>
     <div class="discord-bot">
-        <discord-message :bot="true" role-color="#5fb0fa" author="Custom Command" avatar="/bot-profile.png">
+        <discord-message :bot="true" role-color="#5fb0fa" author="Custom Command" avatar="bot-profile.png">
             <slot></slot>
         </discord-message>
     </div>
