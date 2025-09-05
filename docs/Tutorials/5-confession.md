@@ -1,69 +1,60 @@
 ---
 order: 5
 ---
+
 # Confession
-In this guide, you will learn how to make a simple slash command called `/confess`, where user can use to send a confession in a beautiful embed like this:
-![](https://i.imgur.com/kJwJ9Fi.png)
 
-## 1. Create a command
-The first step is to create a new slash command:
-* Head to your server in [dashboard](https://ccommandbot.com/dashboard)
-* Click `Slash Command Builder`
-* Construct the confess command (follow the next GIF)
-![](https://i.imgur.com/1IUUCn9.gif)
+**Difficulty:** <Medium/>
 
-## 2. Responding To Code
-Next, Let's write the code that will respond when user runs the slash command:
-* Head to your server in [dashboard](https://ccommandbot.com/dashboard)
-* Click `Manage Your Commands`
-* Click `Create`
-* In Command Settings, select the Trigger Type to be "Slash Command", then select `/confess`
-* For Code:
-    * To respond to the user, you can do so with `$interactionReply[message]` where message is the text you would like to display:
-    > For example: $interactionReply[Hello World]
-    * To receive user input of confession, we can use $getOption[option name], where `option name` is same option name we used while building the slash command which is `message`
-    > For example: $getOption[message]
-    * So we would combine both and code would look like:
+In this guide, you will learn how to make a simple slash command called `/confess`, where user can privately confess inside of embed.
+
+<Discord>
+    <BotMessage>
+        <discord-embed borderColor="#00ff00" embedTitle="Anonymous confession">
+            I luv CC
+        </discord-embed>
+    </BotMessage>
+</Discord>
+
+## 1. Create a Slash
+
+The first step is to create a new slash command. [Here's a step-by-step guide.](../Triggers/3-slash.md) Create a slash command named `/confess` with text option `message`.
+
+## 2. Trigger Options
+
+If you've already created slash command, you need also a normal custom command. Create a new command and set the trigger type to `Slash Command`. Then in trigger slash you can select your slash command from the dropdown menu:
+<Pic src="/images/tutorials/confession/1.png"/>
+
+## 3. Code
+
+Next, you need to send an embed with your message. We will use [curl format](../Info/5-curl.md) with [`$sendMessage`](../Functions/Message/sendMessage.md) to send an embed. To retrive the message entered, use [`$getOption`](../Functions/Interaction/getOption.md).
+
 ```php
-$interactionReply[Your confession is
-
-$getOption[message]
+$sendMessage[
+    {title:Anonymous confession}
+    {description:$getOption[message]}
+    {color:green}
 ]
 ```
-![](https://i.imgur.com/Xayi6uY.gif)
 
-## 3. Output (Normal Message)
-That is all, let's test it out :star_struck:
-![](https://i.imgur.com/94mlDMR.gif)
+If you'd like to see who sent the confession, use [`$interactionReply`](../Functions/Interaction/interactionReply.md):
 
-It works :happy:! but... what about making the respond into a beautiful embed?
-
-## 4. Modify Code To Respond With Embed
-To build an embed, we need to use [curl message format](../CodeReferences/ref.message_curl_format.md).
-Curl is a way for you to build an embed in the place of the `message` input, for example to set up an embed with description and title we will use:
-```js
-{desc:My embed description}
-{title:My embed title}
-```
-> You can see the full list [here](../CodeReferences/ref.message_curl_format.md)
-
-So, We will modify the message content of `$interactionReply` and use the curl message format, code would look like:
 ```php
 $interactionReply[
-
-{title:$username's confession}
-{desc:
-$getOption[message]
-}
-{color:GREEN}
+    {title:Confession by $displayName}
+    {description:$getOption[message]}
+    {color:green}
 ]
 ```
-![](https://i.imgur.com/aYUTPta.png)
 
-## 5. Output (Message With Embed)
-Let's test again!
-![](https://i.imgur.com/d4sbm0f.gif)
+## 4. Confess
 
+Confess and see how it works!
 
-Congratulations, You made a functional slash command :tada:!
-> Of course this might be simple, but it's good start!
+<Discord>
+    <BotMessage>
+        <DiscordEmbed borderColor="#00ff00" embedTitle="Anonymous confession">
+            Am i the only one that doesn't like JavaScript/TypeScript?
+        </DiscordEmbed>
+    </BotMessage>
+</Discord>

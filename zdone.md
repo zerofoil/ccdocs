@@ -22,5 +22,9 @@
 - [ ] Guide
 - [ ] Info
 - [ ] Triggers
-- [ ] Tutorials
-  - [x] Ping Command
+- [x] Tutorials
+  - [x] ping
+  - [x] report
+  - [x] staff-app
+  - [x] collect
+  - [x] confession

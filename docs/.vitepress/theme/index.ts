@@ -11,10 +11,16 @@ import {
     BadgeRelated,
     BadgePremium,
     BadgeNormal,
+    BadgeCache,
 
     DiscordWrapper,
     UserMessage,
     BotMessage,
+    UserMention,
+    Buttons,
+    Button,
+
+    ThemeImage,
 } from "./components";
 
 import Cooldowns from "./Cooldowns.vue";
@@ -63,11 +69,16 @@ export default {
         app.component("Related", BadgeRelated);
         app.component("Premium", BadgePremium);
         app.component("Normal", BadgeNormal);
+        app.component("Cache", BadgeCache);
 
         app.component("UserMessage", UserMessage);
         app.component("BotMessage", BotMessage);
         app.component("Discord", DiscordWrapper);
+        app.component("Mention", UserMention);
+        app.component("Buttons", Buttons);
+        app.component("Button", Button);
 
         app.component("Cooldown", Cooldowns);
+        app.component("Pic", ThemeImage);
     }
 } satisfies Theme

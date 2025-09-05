@@ -1,4 +1,6 @@
 # $findMember
+<br/>
+<Cache/>
 
 Searches for a user in the current server by their nickname, ID, mention, username, or username with discriminator. Returns userID of the found user.
 

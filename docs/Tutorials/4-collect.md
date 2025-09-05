@@ -1,100 +1,58 @@
 ---
 order: 4
 ---
+
 # Reward Collection
 
-In this guide, you will learn how to create a one-time use command that allows users to collect a money reward.
+**Difficulty:** <Normal/>
 
-## 1. Create a command
+This time, you will learn how to make a one-time use command.
 
-The first step is to create a new command, which you can learn to do in [this guide](../Guide/1.create.md).
+## 1. Trigger Options
 
-## 2. Set a trigger
+Create a new command, and set the word trigger to `!collect` (your choice).
 
-Users will collect their reward by using the `!collect` command, so let's set that up as the trigger:
+## 2. Code
 
-![Trigger](https://cdn.discordapp.com/attachments/957286111250624552/1102554279417495583/image.png)
+Now that we have the trigger set, we have to make a code.
 
-## 3. Craft the code
+We will need these functions:
+- [`$getUserVar`](../Functions/Variables/getUserVar.md) - To get variable value
+- [`$setUserVar`](../Functions/Variables/setUserVar.md) - To set variable value
+- [`$increaseUserVar`](../Functions/Variables/increaseUserVar.md) - To increase variable value
+- [`$onlyIf`](../Functions/only/onlyIf.md) - To stop the code if expression returns false
 
-Now that we have the initial setup done, it's time to make the command actually work.
-
-::: tip We will use:
-* [$getUserVar](../Variables/getUserVar.md) - to load the user's balance
-* [$let](../Variables/let.md) - to temporarily store the balance
-* [$math](../Text/Math/math.md) - to calculate new balance
-* [$setUserVar](../Variables/setUserVar.md) - to set the new balance
-:::
-
-### Prize
-
-The reward that users will receive is 100$ with the [template economy](../Guide/4.template.md). Since the template economy uses the `money` user var to store a user's balance, we will contribute to that var.
-
-### Getting user var
-
-Let's get a user's balance and store it in a temporary variable called `bal`:
+We start with checking if the user has already collected the reward:
 
 ```php
-$let[bal;$getUserVar[money]]
+$onlyIf[$getUserVar[collected]!=true;You have already collected this reward!]
 ```
 
-### Calculating new balance
+After checking, we need to set it to collected:
 
-Next, we'll add 100$ to the balance:
-
-```php
-$let[bal;$math[$bal+100]]
+```php{2}
+$onlyIf[$getUserVar[collected]!=true;You have already collected this reward!]
+$setUserVar[collected;true] // [!code focus]
 ```
 
-### Saving the new balance
+Now we just increase the money variable, and let them know it was collected successfully:
 
-Now that we have the new balance, let's overwrite the current balance with the new one:
-
-```php
-$setUserVar[money;$bal]
+```php{3,4}
+$onlyIf[$getUserVar[collected]!=true;You have already collected this reward!]
+$setUserVar[collected;true]
+$increaseUserVar[money;100] // [!code focus] change to your needs
+Reward collected! // [!code focus]
 ```
 
-At this point, the command will successfully increase the balance, but we want to ensure that users can only collect the reward once.
+## 3. Collect
 
-### Setting a variable
+Try your collect command and earn!
 
-In order to prevent users from collecting multiple rewards, we need to save information about whether each user has already used the command.
-
-```php
-$setUserVar[hasCollected;true]
-```
-
-### Adding a condition
-
-Now that we have a variable called `hasCollected` that returns whether the user has already collected the reward, let's use it to prevent users from collecting the same reward multiple times by putting this code at the beginning of the command:
-
-```php
-$onlyIf[$getUserVar[hasCollected]!=true;You cannot collect the same reward more than once!]
-```
-
-### Final result
-![Setup preview](https://cdn.discordapp.com/attachments/957286111250624552/1102577377688698920/collect.png)
-
-Let's see if it works correctly
-
-<discord-messages>
-    <discord-message author="Member" role-color="#ffcc9a">
+<Discord>
+    <UserMessage>
         !collect
-    </discord-message>
-    <discord-message :bot=true author="Custom Command" role-color="#0099ff" avatar="https://media.discordapp.net/avatars/725721249652670555/781224f90c3b841ba5b40678e032f74a.webp">
-        Enjoy your 100$ reward!
-    </discord-message>
-    <discord-message author="Member" role-color="#ffcc9a">
-        !collect
-    </discord-message>
-    <discord-message :bot=true author="Custom Command" role-color="#0099ff" avatar="https://media.discordapp.net/avatars/725721249652670555/781224f90c3b841ba5b40678e032f74a.webp">
-        You cannot collect the same reward more than once!
-    </discord-message>
-</discord-messages>
-
-::: tip Note
-You may not always limit executions to one per user, you can use other vars like `server vars` to restrict the command to one execution per server. 
-:::
-
-### 🎉 Congrats!
-You've learned how to make a command that can be used only one time!
+    </UserMessage>
+    <BotMessage>
+        Reward collected!
+    </BotMessage>
+</Discord>
