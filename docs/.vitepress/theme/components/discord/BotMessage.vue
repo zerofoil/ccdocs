@@ -1,7 +1,8 @@
 <script setup>
 import { useData } from 'vitepress';
 const { base } = useData();
-const path = base.value + "bot-profile.png"
+const burl = base || "";
+const path = burl + "bot-profile.png"
 </script>
 
 <template>

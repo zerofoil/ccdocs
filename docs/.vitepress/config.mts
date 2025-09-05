@@ -6,7 +6,7 @@ const quickAccess = {
 
     // Just in case
     image: "/images/bot-profile.png",
-    icon: "/images/favicon.ico",
+    icon: "/ccdocs/images/favicon.ico",
     discord_url: "https://ccommandbot.com/join",
     github_url: "https://github.com/raspdevpy/ccdoc",
 }
@@ -18,7 +18,7 @@ const light: BundledTheme = "vitesse-light"
 const dark: BundledTheme = "vitesse-dark"
 
 const vitePressConfig = {
-    base: "/ccdocs/",
+    base: "/",
     vite: { ssr: { noExternal: ['@discord-message-components/vue'] } },
     ignoreDeadLinks: true,
     
