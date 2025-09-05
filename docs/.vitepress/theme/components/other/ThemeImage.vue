@@ -1,6 +1,6 @@
 <script setup>
 import { useData } from 'vitepress';
-import { computed, toRef } from 'vue';
+import { computed } from 'vue';
 
 const props = defineProps({
     src: {

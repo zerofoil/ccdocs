@@ -18,6 +18,7 @@ const light: BundledTheme = "vitesse-light"
 const dark: BundledTheme = "vitesse-dark"
 
 const vitePressConfig = {
+    vite: { ssr: { noExternal: ['@discord-message-components/vue'] } },
     ignoreDeadLinks: true,
     
     title: quickAccess["docs_title"],
