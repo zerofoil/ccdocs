@@ -1,5 +1,5 @@
 <script setup>
-import { useData } from 'vitepress';
+import { useData, withBase } from 'vitepress';
 import { computed } from 'vue';
 
 const props = defineProps({
@@ -8,19 +8,17 @@ const props = defineProps({
         required: true
     }
 });
-const { isDark, base } = useData();
-const burl = base || "";
-const image = burl + props.src;
+const { isDark } = useData();
+const image = withBase(props.src);
 const dark = image.slice(0, -4) + "-dark.png";
 
-
 const img = computed(() => {
-    return isDark.value ? dark : image;
+    return /*isDark.value ? dark : */image;
 });
 </script>
 
 <template>
-    <img :src="src" alt="" class="theme-image"/>
+    <img :src="img" alt="" class="theme-image"/>
 </template>
 
 <style>
