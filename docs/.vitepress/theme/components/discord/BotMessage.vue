@@ -1,6 +1,6 @@
 <script setup>
 import { useData, withBase } from 'vitepress';
-const path = withBase("bot-profile.png");
+const path = withBase("/bot-profile.png");
 </script>
 
 <template>
