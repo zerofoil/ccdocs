@@ -7,7 +7,7 @@ const quickAccess = {
 
     // Just in case
     image: "/images/bot-profile.png",
-    icon: `${base}/images/favicon.ico`,
+    icon: `${base}images/favicon.ico`,
     discord_url: "https://ccommandbot.com/join",
     github_url: "https://github.com/raspdevpy/ccdoc",
 }
