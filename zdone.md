@@ -19,6 +19,8 @@
 - [ ] Variables
 
 - [ ] Contribute
+  - [x] contributing
+  - [ ] template
 - [ ] Guide
 - [ ] Info
 - [ ] Triggers

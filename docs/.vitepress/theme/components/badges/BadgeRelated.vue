@@ -21,5 +21,6 @@ const props = defineProps({
 .VPBadge.related {
     color: rgba(172, 100, 255, 1);
     background-color: rgba(172, 100, 255, 0.16);
+    text-decoration: underline;
 }
 </style>

@@ -12,6 +12,7 @@ import {
     BadgePremium,
     BadgeNormal,
     BadgeCache,
+    BadgeArg,
 
     DiscordWrapper,
     UserMessage,
@@ -68,6 +69,7 @@ export default {
         app.component("Premium", BadgePremium);
         app.component("Normal", BadgeNormal);
         app.component("Cache", BadgeCache);
+        app.component("Arg", BadgeArg);
 
         app.component("UserMessage", UserMessage);
         app.component("BotMessage", BotMessage);

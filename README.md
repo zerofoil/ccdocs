@@ -5,7 +5,7 @@ Official Custom Command documentation page.
 You can contribute by forking this repo, [click here](https://github.com/raspdevpy/ccdoc/fork), modify the changes, then Pull request.
 
 # How to run?
-Required: Node 20.x, npm
+Required: Node 18.x, npm
 
 1. run `git clone https://github.com/raspdevpy/ccdoc`
 2. run `npm install` (or `npm i`)

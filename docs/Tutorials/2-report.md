@@ -91,11 +91,9 @@ Now just test your command, and see how it works!
     <UserMessage>
         !report <Mention text="User 2"/> Spamming in main chat
     </UserMessage>
-    <div class="discord-bot">
-        <discord-message :bot="true" role-color="#5fb0fa" author="Custom Command" avatar="/bot-profile.png">
-            <discord-mention :highlight="true">User</discord-mention> your report has been submitted.
-        </discord-message>
-    </div>
+    <BotMessage>
+        <Mention/> your report has been submitted.
+    </BotMessage>
 </Discord>
 
 <br/>
@@ -103,9 +101,7 @@ Now just test your command, and see how it works!
 ##### #reports
 
 <Discord>
-    <div class="discord-bot">
-        <discord-message :bot="true" role-color="#5fb0fa" author="Custom Command" avatar="/bot-profile.png">
-            <discord-mention :highlight="true">User</discord-mention> reported <Mention text="User 2"/> for Spamming in main chat.
-        </discord-message>
-    </div>
+    <BotMessage>
+        <Mention/> reported <Mention text="User 2"/> for Spamming in main chat.
+    </BotMessage>
 </Discord>

@@ -1,8 +1,8 @@
 # replacer.py
 # Replacer tool to efficiently replace text in documentation
 
-find = ""
-replace = ""
+find = "Heres "
+replace = "Here's "
 
 import os
 total = 0

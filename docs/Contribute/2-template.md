@@ -7,19 +7,23 @@ order: 2
 
 <br/>
 
-Short description of the function, what does the function do?
+Short description of the function, what does the function do? Make sure this is straightforward and understandable.
 
 ## Arguments
 
 ```php
-$functionName[arguments]
+$functionName[argument;another]
 ```
 
-- **`arguments`** - (Optional)? Default value: `value`. Argument description here.
+- <Arg arg="argument" :required="false" default="value"/> - Argument description here.
+- <Arg arg="another" :required="true"/> - If it's not optional, set the required parameter to true.
 
 ## Example
 
 What does this example show?
+- **`arguments`** - Argument description here. If it's not optional, say `Required`.
+  - Optional - Default value: `value`.
+- **`another`** ~ - Add as many arguments as the function has.
 
 <Discord>
     <UserMessage>
@@ -32,5 +36,5 @@ What does this example show?
 
 <Cooldown/>
 
-##### Related functions: <Related text="Contributing to the Documentation" url="./main"/> <Related text="$timeToDate" url="../Functions/Date/timeToDate"/>
+##### Related: <Related text="Contributing to the Documentation" url="./main"/>
 ##### Function difficulty: <Easy/>

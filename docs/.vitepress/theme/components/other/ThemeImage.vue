@@ -13,7 +13,7 @@ const image = withBase(props.src);
 const dark = image.slice(0, -4) + "-dark.png";
 
 const img = computed(() => {
-    return /*isDark.value ? dark : */image;
+    return isDark.value ? dark : image;
 });
 </script>
 

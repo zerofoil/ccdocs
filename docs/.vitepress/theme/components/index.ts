@@ -8,6 +8,7 @@ export { default as BadgePremium } from "./badges/BadgePremium.vue";
 export { default as BadgeNormal } from "./badges/BadgeNormal.vue";
 export { default as BadgeCache } from "./badges/BadgeCache.vue";
 export { default as ThemeImage } from "./other/ThemeImage.vue";
+export { default as BadgeArg } from "./badges/BadgeArg.vue";
 /* DISCORD */
 export { default as Buttons } from "./discord/Buttons.vue";
 export { default as Button } from "./discord/Button.vue";
