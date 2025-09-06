@@ -1,5 +1,5 @@
 <script setup>
-import { useData, withBase } from 'vitepress';
+import { withBase } from 'vitepress';
 const path = withBase("/images/bot-profile.png");
 </script>
 

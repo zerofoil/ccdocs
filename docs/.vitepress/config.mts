@@ -7,6 +7,7 @@ const quickAccess = {
 
     // Just in case
     image: "/images/bot-profile.png",
+    banner: `${base}images/banner.png`,
     icon: "/favicon.ico",
     discord_url: "https://ccommandbot.com/join",
     github_url: "https://github.com/raspdevpy/ccdoc",
@@ -29,16 +30,18 @@ const vitePressConfig = {
         logo: quickAccess.image,
         head: [
             ['link', { rel: "icon", href: quickAccess.icon }],
-            
-            ["meta", { name: "theme-color", content: "#74b0f7" }],
+
 		    ["meta", { property: "og:title", content: quickAccess.embed_title }],
+		    ["meta", { property: "og:type", content: "website" }],
 		    ["meta", { property: "og:description", content: quickAccess.desc }],
-		    ["meta", { property: "og:image", content: quickAccess.image }],
-		    //["meta", { property: "og:url", content: "https://ccommandbot.com" }],
+		    ["meta", { property: "og:url", content: "https://ccommandbot.com" }],
+		    ["meta", { property: "og:image", content: quickAccess.banner }],
 
 		    ["meta", { name: "twitter:title", content: quickAccess.embed_title }],
 		    ["meta", { name: "twitter:description", content: quickAccess.desc }],
-		    ["meta", { name: "twitter:image", content: quickAccess.image }]
+		    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+
+            ["meta", { name: "theme-color", content: "#5fb0fa" }]
         ],
         search: { provider: "local" },
         nav: [
