@@ -7,17 +7,14 @@ const quickAccess = {
 
     // Just in case
     image: "/images/bot-profile.png",
-    banner: `${base}images/banner.png`,
-    icon: "/favicon.ico",
+    banner: `${base || "/"}images/banner.png`,
+    icon: `${base || "/"}favicon.ico`,
     discord_url: "https://ccommandbot.com/join",
     github_url: "https://github.com/raspdevpy/ccdoc",
 }
 
 import { defineConfig } from "vitepress";
 import { withSidebar } from "vitepress-sidebar";
-import { BundledTheme } from "shiki";
-const light: BundledTheme = "vitesse-light"
-const dark: BundledTheme = "vitesse-dark"
 
 const vitePressConfig = {
     base: base,
@@ -26,23 +23,23 @@ const vitePressConfig = {
     
     title: quickAccess.docs_title,
     description: quickAccess.desc,
+    head: [
+        ['link', { rel: "icon", href: quickAccess.icon }],
+
+		["meta", { property: "og:title", content: quickAccess.embed_title }],
+		["meta", { property: "og:type", content: "website" }],
+		["meta", { property: "og:description", content: quickAccess.desc }],
+		["meta", { property: "og:url", content: "https://ccommandbot.com" }],
+		["meta", { property: "og:image", content: quickAccess.banner }],
+
+		["meta", { name: "twitter:title", content: quickAccess.embed_title }],
+		["meta", { name: "twitter:description", content: quickAccess.desc }],
+		["meta", { name: "twitter:card", content: "summary_large_image" }],
+
+        ["meta", { name: "theme-color", content: "#5fb0fa" }]
+    ],
     themeConfig: {
         logo: quickAccess.image,
-        head: [
-            ['link', { rel: "icon", href: quickAccess.icon }],
-
-		    ["meta", { property: "og:title", content: quickAccess.embed_title }],
-		    ["meta", { property: "og:type", content: "website" }],
-		    ["meta", { property: "og:description", content: quickAccess.desc }],
-		    ["meta", { property: "og:url", content: "https://ccommandbot.com" }],
-		    ["meta", { property: "og:image", content: quickAccess.banner }],
-
-		    ["meta", { name: "twitter:title", content: quickAccess.embed_title }],
-		    ["meta", { name: "twitter:description", content: quickAccess.desc }],
-		    ["meta", { name: "twitter:card", content: "summary_large_image" }],
-
-            ["meta", { name: "theme-color", content: "#5fb0fa" }]
-        ],
         search: { provider: "local" },
         nav: [
             { text: "Guide", link: "/" },
@@ -54,8 +51,8 @@ const vitePressConfig = {
     }, 
     markdown: {
         theme: {
-            light: light,
-            dark: dark
+            light: "vitesse-light",
+            dark: "vitesse-dark"
         }
     },
 }
@@ -77,5 +74,6 @@ const sidebarOptions = {
 }
 
 export default defineConfig(
+    // @ts-ignore
     withSidebar(vitePressConfig, sidebarOptions)
 )
