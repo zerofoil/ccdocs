@@ -28,7 +28,7 @@ const vitePressConfig = {
     themeConfig: {
         logo: quickAccess.image,
         head: [
-            ['link', { rel: "icon", href: "https://zerofoil.github.io/ccdocs/favicon.ico" }],
+            ['link', { rel: "icon", href: quickAccess.icon }],
             
             ["meta", { name: "theme-color", content: "#74b0f7" }],
 		    ["meta", { property: "og:title", content: quickAccess.embed_title }],
