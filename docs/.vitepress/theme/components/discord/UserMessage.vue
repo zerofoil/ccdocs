@@ -1,6 +1,11 @@
+<script setup>
+import { withBase } from 'vitepress';
+const avatar = withBase("/images/0.png");
+</script>
+
 <template>
     <div class="discord-user">
-        <discord-message :bot="false" role-color="#d6e0ff" author="User" avatar="https://cdn.discordapp.com/embed/avatars/0.png">
+        <discord-message :bot="false" role-color="#d6e0ff" author="User" :avatar="avatar">
             <slot></slot>
         </discord-message>
     </div>

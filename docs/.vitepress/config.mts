@@ -3,11 +3,11 @@ const quickAccess = {
     // Likely to edit
     docs_title: "Custom Command",
     embed_title: "Custom Command Bot Documentation",
-    desc: "Discover clear, practical instructions to configure, command, and customize your Custom Command Bot documentation.",
+    desc: "Discover clear, practical instructions to configure and customize your Custom Command Bot.",
 
     // Just in case
     image: "/images/bot-profile.png",
-    icon: `${base}images/favicon.ico`,
+    icon: "/favicon.ico",
     discord_url: "https://ccommandbot.com/join",
     github_url: "https://github.com/raspdevpy/ccdoc",
 }
@@ -23,22 +23,22 @@ const vitePressConfig = {
     vite: { ssr: { noExternal: ['@discord-message-components/vue'] } },
     ignoreDeadLinks: true,
     
-    title: quickAccess["docs_title"],
-    description: quickAccess["desc"],
+    title: quickAccess.docs_title,
+    description: quickAccess.desc,
     themeConfig: {
-        logo: quickAccess["image"],
+        logo: quickAccess.image,
         head: [
-            ["link", { rel: "icon", href: quickAccess["icon"] }],
-            ["meta", { name: "theme-color", content: "#74b0f7" }],
-
-		    ["meta", { property: "og:title", content: quickAccess["embed_title"] }],
-		    ["meta", { property: "og:description", content: quickAccess["desc"] }],
-		    ["meta", { property: "og:image", content: quickAccess["image"] }],
-		    //["meta", { property: "og:url", content: "https://ccommandbot.com" }],
+            ['link', { rel: "icon", href: "https://zerofoil.github.io/ccdocs/favicon.ico" }],
             
-		    ["meta", { name: "twitter:title", content: quickAccess["embed_title"] }],
-		    ["meta", { name: "twitter:description", content: quickAccess["desc"] }],
-		    ["meta", { name: "twitter:image", content: quickAccess["image"] }]
+            ["meta", { name: "theme-color", content: "#74b0f7" }],
+		    ["meta", { property: "og:title", content: quickAccess.embed_title }],
+		    ["meta", { property: "og:description", content: quickAccess.desc }],
+		    ["meta", { property: "og:image", content: quickAccess.image }],
+		    //["meta", { property: "og:url", content: "https://ccommandbot.com" }],
+
+		    ["meta", { name: "twitter:title", content: quickAccess.embed_title }],
+		    ["meta", { name: "twitter:description", content: quickAccess.desc }],
+		    ["meta", { name: "twitter:image", content: quickAccess.image }]
         ],
         search: { provider: "local" },
         nav: [

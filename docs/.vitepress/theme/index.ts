@@ -38,7 +38,6 @@ import {
   DiscordMessages,
   DiscordReaction,
   DiscordReactions,
-  //DiscordMessageComponents
 } from "@discord-message-components/vue";
 
 import "@discord-message-components/vue/dist/style.css";
@@ -47,7 +46,6 @@ export default {
     extends: DefaultTheme,
     enhanceApp({ app }) {
         // Discord conmponents
-        //app.use(DiscordMessageComponents, {});
         app.component("DiscordButton", DiscordButton);
         app.component("DiscordButtons", DiscordButtons);
         app.component("DiscordEmbed", DiscordEmbed);
