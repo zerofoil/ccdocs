@@ -21,7 +21,7 @@
 - [ ] Contribute
   - [x] contributing
   - [x] template
-  - [ ] command templating
+  - [x] command templating
 - [ ] Guide
 - [ ] Info
 - [ ] Triggers
