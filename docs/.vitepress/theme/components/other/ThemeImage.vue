@@ -6,6 +6,14 @@ const props = defineProps({
     src: {
         type: String,
         required: true
+    },
+    width: {
+        type: String,
+        default: ""
+    },
+    height: {
+        type: String,
+        default: ""
     }
 });
 const { isDark } = useData();
@@ -18,7 +26,7 @@ const img = computed(() => {
 </script>
 
 <template>
-    <img :src="img" alt="" class="theme-image"/>
+    <img :src="img" alt="" class="theme-image" :height="height" :width="width"/>
 </template>
 
 <style>

@@ -20,10 +20,7 @@ $functionName[argument;another]
 
 ## Example
 
-What does this example show?
-- **`arguments`** - Argument description here. If it's not optional, say `Required`.
-  - Optional - Default value: `value`.
-- **`another`** ~ - Add as many arguments as the function has.
+What does this example show? Usage of $functionName
 
 <Discord>
     <UserMessage>
@@ -36,5 +33,5 @@ What does this example show?
 
 <Cooldown/>
 
-##### Related: <Related text="Contributing to the Documentation" url="./main"/>
+##### Related: <Related text="Contributing to the Documentation" url="./1-contributing.md"/>
 ##### Function difficulty: <Easy/>

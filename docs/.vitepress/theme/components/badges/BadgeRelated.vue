@@ -1,5 +1,5 @@
 <template>
-    <a :href="url">
+    <a :href="link">
         <Badge type="related" :text="text"/>
     </a>
 </template>
@@ -14,7 +14,8 @@ const props = defineProps({
         type: String,
         default: "/"
     }
-})
+});
+const link = props.url.replace(".md", "");
 </script>
 
 <style>

@@ -39,6 +39,10 @@ const vitePressConfig = {
         ["meta", { name: "theme-color", content: "#5fb0fa" }]
     ],
     themeConfig: {
+        editLink: {
+            pattern: "https://github.com/zerofoil/ccdocs/edit/master/docs/:path",
+            text: "Improve This Page!"
+        },
         logo: quickAccess.image,
         search: { provider: "local" },
         nav: [

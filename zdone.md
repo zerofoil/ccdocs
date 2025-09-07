@@ -20,7 +20,8 @@
 
 - [ ] Contribute
   - [x] contributing
-  - [ ] template
+  - [x] template
+  - [ ] command templating
 - [ ] Guide
 - [ ] Info
 - [ ] Triggers

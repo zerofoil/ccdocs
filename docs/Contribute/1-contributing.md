@@ -13,7 +13,7 @@ Here's a quick guide on how to contribute to our documentation. We appreciate yo
 
 ## Editing/Creating Page
 
-You can contribute by editing existing pages directly through our GitHub repository.
+You can contribute by editing existing pages directly through our GitHub repository. On bottom of every page there's "Improve This Page!" button, which will take you straight to the edit mode.
 
 **You will need:**
 - **GitHub Account:** To contribute, [GitHub account](https://github.com) is required.
