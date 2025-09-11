@@ -1,32 +1,27 @@
 # Creating Custom Commands
 
-Creating custom commands for your bot might seem daunting at first, but this guide will walk you through the process step-by-step! We'll explain each setting and show you how to use them effectively.
+Creating custom commands for your server might seem difficult at first, but this guide will walk you through the process step-by-step. We'll explain each setting and show you how to use them.
 
 ## Creating a New Command
 
-Before diving into the settings, let's create a new command:
+Before diving into the settings, you have to create new command:
 
-1.  Head over to the [dashboard](https://ccommandbot.com/dashboard)! This is where all the magic happens.
+1. Head over to the [dashboard](https://ccommandbot.com/dashboard) and select the server you want to make a command in:
+![](https://i.imgur.com/2AlwSPW.png)
 
-2.  Select the server you want to work on.
+2. Navigate to the **Custom Command** section:
+![](https://i.imgur.com/TAZ2qrh.png)
 
-    > ![](https://i.imgur.com/2AlwSPW.png)
-
-3.  Navigate to the **Manage Commands** section.
-
-    > ![](https://i.imgur.com/TAZ2qrh.png)
-
-4.  Click the **Create** button to start building your command.
-
-    > ![](https://i.imgur.com/VFsbL20.png)
+4. And click the **Create** button to make a new command:
+![](https://i.imgur.com/VFsbL20.png)
 
 ::: tip Dashboard Tour
-On your first visit, you'll be greeted with a helpful dashboard tour. We highly recommend taking it! It will save you a lot of time and trouble in the long run by explaining all the features.
+On your first visit, you'll be greeted with a helpful dashboard tour. We highly recommend taking it since it will save you a lot of time figuring things out.
 :::
 
 ## Command Type
 
-The first, and most important, part of any command is its **Type**. This is the trigger that activates your command. Choose a type from the dropdown menu:
+The first, and most important part of any command is its type. This is the way your command will get activated. Choose a type from the dropdown menu:
 
 > ![Type dropdown](https://cdn.discordapp.com/attachments/957286111250624552/1096882428422918164/image.png)
 

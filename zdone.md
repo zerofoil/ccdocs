@@ -18,7 +18,7 @@
 - [ ] Useful
 - [ ] Variables
 
-- [ ] Contribute
+- [x] Contribute
   - [x] contributing
   - [x] template
   - [x] command templating

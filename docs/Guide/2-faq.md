@@ -1,4 +1,4 @@
-# Frequently Asked Questions (FAQ)
+# Frequently Asked Questions
 
 ## Why does the bot have such high cooldowns?
 
