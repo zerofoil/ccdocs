@@ -128,8 +128,8 @@ Escape alternatives:
 - `#RIGHT_CLICK#` -> `>`
 - `#LEFT_CLICK#` -> `<`
 - `#EQUAL#` -> `=`
-- `#RIGHT_BRACKET#` -> `{`
-- `#LEFT_BRACKET#` -> `}`
+- `#RIGHT_BRACKET#` -> `}`
+- `#LEFT_BRACKET#` -> `{`
 - `#NL#` -> New line
 - `#BR#` -> New line
 - `#SP#` -> Space
