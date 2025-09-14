@@ -1,10 +1,10 @@
 # Bot Syntax
 
-Learn about the syntax used by the bot to understand how to write commands and scripts!
+Learning about the syntax used by this bot is necessary to understand how to write commands.
 
 ## Syntax Overview
 
-The bot's code primarily uses two fundamental types:
+The bot's code uses two types:
 
 1.  [Text](#what-is-text)
 2.  [Function](#what-is-a-function)
@@ -15,162 +15,124 @@ Anything in the code that isn't a [function](#what-is-a-function) is considered 
 
 For example, in the following code snippet:
 
-```
-Hello $username to our server
+```php
+Hello $username, how are you?
 ```
 
-*   `Hello`: This is text.
-*   [`$username`](../Member/username.md): This is a function.
-*   `to our server`: This is text.
+- `Hello` - Text
+- `$username` - Function
+- `, how are you?` - Text
 
 ## What is a Function?
 
-A function is a special instruction that begins with a `$` symbol, like [`$username`](../Member/username.md).
+A function is a special instruction that begins with a `$` symbol, for example [`$username`](../Functions/Member/username.md).
 
-In this example:
-
-```
-Hello $username to our server
+```php
+Hello $username, how are you?
 ```
 
-[`$username`](../Member/username.md) is the only function present.
+- [`$username`](../Functions/Member/username.md) is the only function present. Function [`$username`](../Functions/Member/username.md) returns the users name, that means it will get replaced by it.
 
-### Function Actions
+<Discord>
+    <UserMessage>
+        !!exec Hello $username, how are you?
+    </UserMessage>
+    <BotMessage>
+        Hello user, how are you?
+    </BotMessage>
+</Discord>
 
-Functions generally perform one of these three actions:
+## Function Actions
 
-*   **Replace with a value:** The function is replaced by a specific value.
-*   **Perform an action:** The function executes a task.
-*   **Perform an action and replace with a value:** The function executes a task and then is replaced by a specific value.
+Functions performs one of these three actions:
 
-For example, running this code:
+- **Replace with a value:** The function is replaced by a specific value.
+- **Perform an action:** The function executes a task.
+- **Perform an action and replace with a value:** The function executes a task and then is replaced by a specific value.
 
-```
-Hello $username, welcome to our server!
-```
+## Function Arguments
 
-Will result in the bot sending:
+Some functions require input from you to customize their behavior. Functions are case-insensitive! The format is as follows:
 
-```
-Hello Mido, welcome to our server!
-```
-
-This demonstrates that the [`$username`](../Member/username.md) function is of the "Replace with a value" type. It's replaced by the username of the command executor.
-
-::: tip Function Return Values and Actions
-
-*   A function that `Replaces with a value` is also said to `return` that value. Check the function documentation to understand what it returns. For example:
-    [`$username`](../Member/username.md) ***Returns*** the name of the user that executed the command.
-
-*   A function that `Performs an Action` will have its description begin with a verb describing that action. For example:
-    [`$title`](../Embed/title.md) ***Adds*** a title to a message.
-:::
-
-### Function Input
-
-Some functions require input from you to customize their behavior. The format is as follows:
-
-```
-$function[Inputs]
+```php
+$function[arguments]
 ```
 
-We previously used [`$username`](../Member/username.md) without any input. This is because, as its documentation specifies, it defaults to returning the executor's name.  To get someone else's username, you need to provide their User ID as input.
+We previously used [`$username`](../Functions/Member/username.md) without any input. This is because, as its documentation specifies, it defaults to returning the executor's name.  To get someone else's username, you need to provide their User ID as input.
 
-Let's say we want to get Rake's name instead of Mido's. We first need Rake's User ID (e.g., 1234) and then input it into [`$username`](../Member/username.md):
+Let's say we want to get username from User 2 instead of User:
 
-```
-Hello $username[1234]
-```
+<Discord>
+    <UserMessage>
+        !!exec $username[123456789123456789]
+    </UserMessage>
+    <BotMessage>
+        user2
+    </BotMessage>
+</Discord>
 
-Output:
+---
 
-```
-Hello Rake
-```
+### Multiple Arguments
 
-### Multiple Inputs
+Some functions require multiple arguments. For example [`$msg`](../Functions/Message/msg.md) has required and optional arguments:
 
-Some functions, like `$channelSendMessage`, require multiple inputs.  It needs:
-
-*   The Channel ID to send to.
-*   The Message Content.
-
-Let's assume the channel ID is `1234` and the content is `Hello $username`.  To provide these inputs to the function, we separate them with a semicolon (`;`):
-
-```
-$channelSendMessage[1234;Hello $username]
+```php
+$msg[channelID;messageID;option;additional 1;additional 2]
 ```
 
-Output (in channel with ID 1234):
+- <Arg arg="channelid" required="true"/>
+- <Arg arg="messageid" required="true"/>
+- <Arg arg="option" required="true"/>
+- <Arg arg="additional 1"/>
+- <Arg arg="additional 2"/>
 
-```
-Hello Mido
-```
+### Example
 
-Note:  [`$channelSendMessage`](../Message/channelSendMessage.md) does not get replaced by a value; it only performs an action (sending a message).
+Example of using $msg with multiple arguments
 
-::: tip Case Insensitivity
-Function names are not case-sensitive.  `$authorID` and `$aUtHoRiD` will function identically!
-:::
+<Discord>
+    <UserMessage>
+        !!exec Message content: $msg[$channelID;$messageID;content]
+    </UserMessage>
+    <BotMessage>
+        Message content: $msg[$channelID;$messageID;content]
+    </BotMessage>
+</Discord>
 
-## Expressions
+## Escaping
 
-Some functions require you to provide an "expression" as input.
+Certain characters can cause unexpected behavior and need to be escaped. For example, if you want to send the literal text `$username` instead of having it replaced with the username, use backslash (`\`):
 
-In these cases, please refer to the [Expressions](../CodeReferences/ref.expression.md) documentation for detailed information.
+<Discord>
+    <UserMessage>
+        !!exec Hello \$username, how are you?
+    </UserMessage>
+    <BotMessage>
+        Hello $username, how are you?
+    </BotMessage>
+</Discord>
 
-## Escaping Characters
+Characters that may need escaping in your code:
 
-Certain characters can cause unexpected behavior and need to be "escaped." For example, if you want to send the literal text `$username` instead of having it replaced with the username:
+`$`, `[`, `]`, `;`, `:`, `>`, `<`, `=`, `{`, `}`
 
-Code:
+Escape alternatives:
 
-```
-To get username use function: $username
-```
-
-Output:
-
-```
-To get username use function: Mido
-```
-
-To prevent the `$` from being interpreted as the start of a function, you need to "escape" it by adding a backslash (`\`) before it:
-
-```
-To get username use function: \$username
-```
-
-Output:
-
-```
-To get username use function: $username
-```
-
-Other characters that may need escaping include:
-
-`[`, `]`, `;`, `:`, `>`, `<`, `=`, `{`, `}`
-
-## Encoded Character Codes (Alternative to `\`)
-
-Instead of using backslashes, you can use these encoded character codes to represent special characters:
-
-```js
-#RIGHT# =>> [
-#LEFT# =>> ]
-#SEMI# =>> ;
-#COLON# =>> :
-#DOLLAR# =>> $
-#CHAR# =>> $
-#RIGHT_CLICK# =>> >
-#LEFT_CLICK# =>> <
-#EQUAL# =>> =
-#RIGHT_BRACKET# =>> {
-#LEFT_BRACKET# =>> }
-#NL# =>> New line
-#BR# =>> New line
-#SP# =>> Space
-#TAB# =>> Tab (few spaces)
-#SLASH# =>> /
-#BACKSLASH# =>> \
-```
+- `#RIGHT#` -> `[`
+- `#LEFT#` -> `]`
+- `#SEMI#` -> `;`
+- `#COLON#` -> `:`
+- `#DOLLAR#` -> `$`
+- `#CHAR#` -> `$`
+- `#RIGHT_CLICK#` -> `>`
+- `#LEFT_CLICK#` -> `<`
+- `#EQUAL#` -> `=`
+- `#RIGHT_BRACKET#` -> `{`
+- `#LEFT_BRACKET#` -> `}`
+- `#NL#` -> New line
+- `#BR#` -> New line
+- `#SP#` -> Space
+- `#TAB#` -> Tab
+- `#SLASH#` -> `/`
+- `#BACKSLASH#` -> `\`

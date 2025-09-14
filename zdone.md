@@ -24,6 +24,7 @@
   - [x] command templating
 - [ ] Guide
 - [ ] Info
+  - [x] syntax
 - [ ] Triggers
 - [x] Tutorials
   - [x] ping
