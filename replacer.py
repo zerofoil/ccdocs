@@ -1,8 +1,8 @@
 # replacer.py
 # Replacer tool to efficiently replace text in documentation
 
-find = "Heres "
-replace = "Here's "
+find = ""
+replace = ""
 
 import os
 total = 0
@@ -18,7 +18,10 @@ for path, _, files in os.walk("docs"):
             except Exception:
                 print(f"Error at: {filepath}")
         if find in text:
-            text = text.replace(find, replace)
+            if replace != "":
+                text = text.replace(find, replace)
+            else:
+                print(f"Found | {filepath}")
             with open(filepath, "w", encoding="utf-8") as this:
                 this.write(text)
             total += 1

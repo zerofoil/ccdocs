@@ -96,7 +96,7 @@ Example of using $msg with multiple arguments
         !!exec Message content: $msg[$channelID;$messageID;content]
     </UserMessage>
     <BotMessage>
-        Message content: $msg[$channelID;$messageID;content]
+        !!exec Message content: $msg[$channelID;$messageID;content]
     </BotMessage>
 </Discord>
 

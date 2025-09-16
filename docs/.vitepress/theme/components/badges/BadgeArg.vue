@@ -69,7 +69,7 @@ const req = (props.required) ? "Required Argument" : "Optional Argument";
     .tooltip .tooltiptext {
         visibility: hidden;
         opacity: 0;
-        width: 140px;
+        width: 150px;
         background-color: rgba(0, 0, 0, 0.7);
         color: #fff;
         text-align: center;
@@ -107,7 +107,7 @@ const req = (props.required) ? "Required Argument" : "Optional Argument";
     .tooltip .tooltiptext {
         visibility: hidden;
         opacity: 0;
-        width: 140px;
+        width: 150px;
         background-color: rgba(0, 0, 0, 0.5);
         color: #fff;
         text-align: center;

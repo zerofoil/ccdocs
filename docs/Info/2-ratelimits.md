@@ -2,35 +2,35 @@
 
 To ensure fair usage and prevent abuse, Discord implements rate limits on its API. Our bot also uses a cooldown system to manage requests efficiently. This page explains how these limits work and how they might affect your custom commands.
 
-## What are Cooldowns and Limits?
+## What are Cooldowns and Limits
 
-Think of cooldowns and limits as restrictions designed to prevent the bot from being overwhelmed or misused. They control how frequently certain actions can be performed.
+Cooldowns and limits are restirictions, that control how frequently certain actions can be performed.
 
-*   **Cooldown:** A waiting period before a function can be used again with the same inputs (e.g., by the same user, in the same channel, or in the same guild).
-
-*   **Limit:** A maximum number of times a function can be called within a specific context (e.g., within a single custom command).
+- **Cooldown:** A waiting period before a function can be used again.
+- **Limit:** A maximum number of times a function can be called within single execution.
 
 ## Function Cooldowns
 
-Many functions have a built-in cooldown period. This means that after using the function, there will be a delay before it can be used again with the same input data.
+Many functions have a built-in cooldown period. This means that after using the function, there will be a delay before it can be used again.
 
-**What happens when a function is on cooldown?**
+Function cooldowns have also types, on which name the cooldowns will save.
 
-The bot's behavior depends on the function and its configuration:
+For example if we have 2 functions with the same cooldown type, the second one used will hit cooldown. If the cooldown types are different, functions will execute freely.
 
-*   **Wait and Execute:** The bot waits for the cooldown to expire and then executes the function.
-*   **Error Message:** The bot sends an error message indicating that the function is on cooldown.
-*   **Silent Cancellation:** The bot cancels the execution without any warning message.
+Cooldowns are also `per` something. This means, for example if the cooldown is per user, user will hit cooldown if they will execute 2 same functions with cooldown at once, but not if other user will execute the second one.
 
-::: tip How to Check Function Cooldowns
-You can use the command `!!func function name` to check the cooldown period (if any) of a specific function. This will help you understand how long you need to wait before using the function again.
-:::
+## Hitting Cooldown
+
+When you hit a cooldown, the bot's behavior depends on the function and its configuration:
+
+- **Wait on cooldown:** The bot waits for the cooldown to expire and then executes the function.
+- **Cancel the execution on cooldown with error message:** The bot sends an error message indicating that the function is on cooldown. Code will stop executing and will not continue.
 
 ## Function Limits
 
 Even with cooldowns in place, a function can only be called a limited number of times within a single custom command.
 
-**Function Limit:** A function with cooldown can be called a maximum of **5 times** within a single custom command.
+A function with cooldown can be called a maximum of **5 times** within a single custom command.
 
 If this limit is reached, the bot will silently cancel the execution of the function.
 
@@ -38,17 +38,23 @@ If this limit is reached, the bot will silently cancel the execution of the func
 
 These limits control how many custom commands can run simultaneously and how quickly they can be triggered.
 
-*   **Parallel Execution Limit:** The bot supports up to **5 parallel executions** of the same custom command.
+- **Parallel Execution Limit:** The bot supports up to **5 parallel executions** of the same custom command.
 
-*   **Execution Cooldown:** The same custom command can only be triggered **once every 5 seconds**.
+- **Execution Cooldown:** The same custom command on free tier bot can only be triggered **once every 5 seconds**.
 
-## Premium Benefits (Tier 3/4/5)
+## Premium
 
-Premium tiers (3, 4, and 5) allow you to run your own dedicated bot instance. This comes with significantly relaxed limitations, as your bot runs in an isolated environment.
+Premium tiers: 3, 4 and 5
 
-**Removed/Increased Limits for Premium Tiers:**
+Premium tier 3 is for vote credits. You can redeem using the `!!redeem` command. Other tiers are paid for.
 
-*   **Function Cooldown:** Removed entirely.
-*   **Function Limit:** Hard capped to 20 calls per custom command.
-*   **Execution Limits:** Hard capped to 60 parallel executions.
-*   **Execution Cooldown:** Hard capped to 0.5 seconds.
+### Benefits
+
+- **Custom Bot:** Create your own bot, with custom profile picture, description and name.
+- **Function Cooldowns:** Removed entirely.
+- **Function Limits:** Hard capped to 20 calls per custom command.
+- **Execution Limits:** Hard capped to 60 parallel executions.
+- **Execution Cooldown:** Hard capped to 0.5 seconds.
+- **Better Resources:** Improved bot preformace and latency.
+
+See [ccommandbot.com/perks](https://ccommandbot.com/perks) for more informations.

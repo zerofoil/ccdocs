@@ -25,6 +25,7 @@
 - [ ] Guide
 - [ ] Info
   - [x] syntax
+  - [x] ratelimits
 - [ ] Triggers
 - [x] Tutorials
   - [x] ping

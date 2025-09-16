@@ -15,7 +15,7 @@ Short description of the function, what does the function do? Make sure this is 
 $functionName[argument;another]
 ```
 
-- <Arg arg="argument" :required="false" default="value"/> - Argument description here.
+- <Arg arg="argument" default="value"/> - Argument description here.
 - <Arg arg="another" :required="true"/> - If it's not optional, set the required parameter to true.
 
 ## Example
