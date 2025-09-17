@@ -1,45 +1,27 @@
-# Setting Up Welcomer
+# Using Welcomer
 
-Welcome to the Welcomer setup guide! This feature allows you to automatically send a custom message when a new member joins your server or when a member leaves. Let's walk through the process step-by-step.
+This is a step by step guide on how to set up wecomer in CC Bot. Feel free to customize it to your needs.
 
-1.  **Access the Welcomer Tab:**
+Open your server in dashboard, and follow the steps below.
 
-    First, navigate to the dashboard and click on the `welcomer` tab. This will bring you to the Welcomer settings page.
+## Open Welcomer Page
 
-    ![](/images/welcomer/1.png)
+Navigate to the dashboard and click on the `Welcomer` tab. This will bring you to the Welcomer settings page.
 
-2.  **Configure Member Join/Leave Settings:**
+![](/images/info/welcomer/0.png)
 
-    Within the Welcomer tab, you'll find a section labeled `Member Join/Leave`.  This is where you customize the messages for when members join or leave your server.  Set your desired custom details in this section, such as the welcome message, member goodbye message, and image.
+## Configure Message
 
-    ![](/images/welcomer/2.png)
+Within the Welcomer tab, you'll find 2 options, Join Text and Leave Text. This is where you customize the messages for when members join or leave your server. Set your desired messages there.
 
-3.  **Select a Channel:**
+![](/images/info/welcomer/1.png)
 
-    Next, you need to specify the channel where the welcome and leave messages will be sent. Click on the channel selection box. A dropdown menu will appear, displaying the available channels.
+## Choose Channel
 
-    ![](/images/welcomer/3.png)
+Next, you need to specify the channel where the welcome and leave messages will be sent. Click on the channel selection box and select your preffered channel.
 
-4.  **Choose Your Channel:**
+![](/images/info/welcomer/2.png)
 
-    Select the channel you want the messages to be sent to. In this example, `#general` is selected. You can choose any channel that your bot can *see* and has the necessary permissions to *send messages*.
+## Save
 
-    **Important:** Ensure the bot has the "Embed Links" and "Attach Files" permissions in the selected channel.  This is crucial for the bot to be able to send rich embedded messages and images without any issues.
-
-    ![](/images/welcomer/4.png)
-
-5.  **Save or Deactivate:**
-
-    *   **Save:** Once you've configured your settings and chosen a channel, click the `Save` button to save your changes. Your Welcomer feature is now active!
-
-    *   **Deactivate:** If you want to temporarily disable the Welcomer, simply click the red "Deactivate" button.
-
-    ![](/images/welcomer/5.png)
-
-6.  **Example Outcome:**
-
-    After saving, your Welcomer configuration should look similar to this, reflecting the channel and custom settings you've chosen:
-
-    ![](/images/welcomer/6.png)
-
-That's it! You've successfully configured the Welcomer feature. New members joining or members leaving will now receive your personalized messages in the specified channel. Remember to adjust the settings as needed to keep your community welcoming and engaged.
+Now you're ready to go! You can click the save button, or continue configurating your welcomer further.

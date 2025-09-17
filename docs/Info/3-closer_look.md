@@ -2,6 +2,12 @@
 
 Here you can find more about bot, and its documentation. 
 
+## Bot Commands
+
+Custom Command bot has also some built in commands. For example `!!commands` where you can see them all. There would be two important of them: `!!exec` and `!!func`. Using `!!exec` you can execute code without creating any commands. If you need to know or search for any function, you can use `!!func`.
+
+
+
 ## Understanding the Docs
 
 Almost every function needs parameters. Function parameters (arguments) are values that a function needs to operate correctly.

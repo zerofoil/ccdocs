@@ -1,35 +1,25 @@
 # Troubleshooting
 
-Our bot's advanced features mean users may encounter unique issues. This section addresses common problems, ordered from most frequent to less frequent.
+Our custom language syntax and widely customizable commands can cause new users to encounter problems with their work. This page explains the most common problems.
 
-Each problem is presented as a question, followed by troubleshooting steps and the trigger type.
+## My command doesn't trigger
 
-## My command doesn't trigger  <Badge type="tip" text="Word" vertical="middle" />
+This is a very broad term. First thing you need to check, is if your command is enabled. You can see a switch in the right-top corner in the command editor. If this doesn't help, check your other command settings and code closely. If this issue persists, check section [# My word command doesn't trigger](#My-word-command-doesnt-trigger) or consider asking for help in our [support server](https://ccommandbot.com/join).
 
-**Possible Causes:**
+## My word command doesn't trigger
 
-*   **Incorrect Permission Level:** Have you set the minimum permission level for the command execution to `None`?
+To make sure your word command triggers correctly, you need to make sure the permissions are set correctly. The default minimum required permission should be set to `None`.
 
-    *   **No:** Change the permission level to `None`, save the changes, and try again.
+If that didn't fix your issue, check if your command trigger contains any special characters. Special characters can sometimes interfere with trigger recognition. If your trigger is a RegEx, ensure it's correct.
 
-    *   **Yes:** Continue to the next possible cause.
+The issue might also be in ingnored roles or the code.
 
-*   **Special Characters in Trigger:** Does your command trigger contain any [special characters](../CodeReferences/specialCharacters)? Special characters can sometimes interfere with trigger recognition.
+## Bot doesn't give/take a role
 
-## The bot failed to assign a role
+There can be 2 problems:
+- **Insufficient permission:** If the bot doesn't have a role/permission that can give roles to other users, you have to change the bot's permissions in Discord roles settings.
+- **Role hierarchy:** Discord role system allows to give roles only **under** the bot's highest role. If you want to change that, you need to move the bot's role above the role you wish to give.
 
-**Troubleshooting Steps:**
+## Undescribed/Unknown error
 
-1.  **Insufficient Bot Permissions:** Ensure the bot has sufficient permissions to assign roles.  Granting the bot Administrator permissions is the easiest way to resolve permission issues.
-
-2.  **Role Hierarchy:**  The bot's role (@Custom Command) must be higher in the server's role hierarchy than:
-    *   The role the bot is trying to assign.
-    *   All roles the member already has.
-
-    You can adjust the role hierarchy in your Discord server settings.
-
-    ![Hierarchy example](https://media.discordapp.net/attachments/857273141968371732/964741875179356180/unknown.png?width=497&height=593 "Role Hierarchy Example")
-
-**Still having trouble?**
-
-If these steps don't resolve the issue, please reach out to our staff on the [support server](https://ccommandsbot.com/join) for personalized assistance.
+If the bot gives you error without any description or says the error is unknown, please ask for help in our discord [support server](https://ccommandbot.com/join).

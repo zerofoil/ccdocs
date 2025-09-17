@@ -26,6 +26,9 @@
 - [ ] Info
   - [x] syntax
   - [x] ratelimits
+  - [x] troubleshooting
+  - [x] curl format
+  - [x] welcomer
 - [ ] Triggers
 - [x] Tutorials
   - [x] ping
