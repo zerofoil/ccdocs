@@ -20,7 +20,7 @@ Enter a name for your application and click the `Create` button.
 
 Now proceed to the `Bot` section.
 
-<Pic src="/images/info/custom-bot/5.png"/>
+<Pic src="/images/info/custom-bot/2.png"/>
 
 Here you can change the bot name, profile picture, banner and other important stuff. What we need to do here, is to make the bot private, and turn on all available intents.
 
@@ -30,7 +30,7 @@ Copy following settings and save the changes.
 If this error shows when changing your bot to private app, head to `Installation` page and set it to `None`.
 :::
 
-<Pic src="/images/info/custom-bot/6.png"/>
+<Pic src="/images/info/custom-bot/3.png"/>
 
 ## 4. Generate a Bot Token
 
@@ -40,11 +40,11 @@ Click the `Reset Token` button. This will generate a new, valid token for your b
 Keep this token secure! Do not share it with anyone!
 :::
 
-<Pic src="/images/info/custom-bot/7.png"/>
+<Pic src="/images/info/custom-bot/4.png"/>
 
 Click the `Copy` button under to the token to copy it to your clipboard.
 
-<Pic src="/images/info/custom-bot/8.png"/>
+<Pic src="/images/info/custom-bot/5.png"/>
 
 ## 5. Start Bot
 
