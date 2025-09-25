@@ -1,67 +1,63 @@
 # Setting Up Your Custom Bot
 
-This guide will walk you through setting up your own custom bot. This feature is available to users who have achieved Tier 3+ access, either by redeeming it or by winning it in our support server.
+If you have Tier 3+ access, here's how to set it up. You only need to do this once.
 
-## One-Time Setup Steps
+## 1. Discord Developer Portal
 
-Follow these steps to create and connect your custom bot. You only need to do this once!
+Go to the [Discord Developer Portal](https://discord.com/developers/applications). This is where you'll manage your bot appearance.
 
-### 1. Access the Discord Developer Portal
+Click the button `New Application` to create your bot.
 
-Go to the [Discord Developer Portal](https://discord.com/developers/applications). This is where you'll create and manage your bot.
+<Pic src="/images/info/custom-bot/0.png"/>
 
-### 2. Create a New Application
+## 2. Name Your Application
 
-Click the "New Application" button.
+Enter a name for your application and click the `Create` button.
 
-![Create a new application](https://i.imgur.com/kA8EKS7.png)
+<Pic src="/images/info/custom-bot/1.png"/>
 
-### 3. Name Your Application
+## 3. Bot Configuration
 
-Enter a name for your bot application and click the "Create" button. This name is what your bot will be called on Discord.
+Now proceed to the `Bot` section.
 
-![Enter a name and press the create button](https://i.imgur.com/46zlT4y.png)
+<Pic src="/images/info/custom-bot/5.png"/>
 
-### 4. Navigate to the Bot Section
+Here you can change the bot name, profile picture, banner and other important stuff. What we need to do here, is to make the bot private, and turn on all available intents.
 
-In the left-hand menu, click on the "Bot" section.
+Copy following settings and save the changes.
 
-![Go to section bot](https://i.imgur.com/xUCbccq.png)
+::: tip Private application cannot have a default authorization link
+If this error shows when changing your bot to private app, head to `Installation` page and set it to `None`.
+:::
 
-### 5. Generate a Bot Token
+<Pic src="/images/info/custom-bot/6.png"/>
 
-Click the "Reset Token" button. This will generate a new, valid token for your bot. **Keep this token secure! Do not share it with anyone!**
+## 4. Generate a Bot Token
 
-![](https://i.imgur.com/GbWfwyy.png)
+Click the `Reset Token` button. This will generate a new, valid token for your bot.
 
-### 6. Copy the Token
+::: danger Warning
+Keep this token secure! Do not share it with anyone!
+:::
 
-Click the "Copy" button next to the token to copy it to your clipboard.
+<Pic src="/images/info/custom-bot/7.png"/>
 
-![](https://i.imgur.com/pHYqcIT.png)
+Click the `Copy` button under to the token to copy it to your clipboard.
 
-### 7. Access the CCommandBot Dashboard
+<Pic src="/images/info/custom-bot/8.png"/>
 
-Go to the [Dashboard](https://ccommandbot.com/dashboard) and select the server where you want to use your premium features.
+## 5. Start Bot
 
-![](https://i.imgur.com/Ostshet.png)
+Go to the [Dashboard](https://ccommandbot.com/dashboard) and select the server where you want to use your premium features. Go to the premium page and paste the token you copied. You have to click save to start the bot.
 
-![](https://i.imgur.com/fQXdiT3.png)
+<Pic src="https://i.imgur.com/2FAuEKp.png"/>
 
-### 8. Paste the Token and Save
+## 6. Inviting Bot
 
-Paste the copied token into the "Token" input field and click the "Save" button.
+Click on the `Invite Your Bot` button. This will take you to a Discord authorization page where you can select the server you want to add your bot to.
 
-![](https://i.imgur.com/2FAuEKp.png)
+<Pic src="https://i.imgur.com/zkjCUvB.png"/>
 
-### 9. Invite Your Bot to Your Server
-
-Click on the "Invite your bot" button. This will take you to a Discord authorization page where you can select the server you want to add your bot to. **Make sure you have the "Manage Server" permission in the server you're inviting the bot to.**
-
-![](https://i.imgur.com/zkjCUvB.png)
-
-### 10. All Done!
-
-You're finished! Wait a few minutes for your bot to come online. :tada:
-
-**Important:** Make sure the main CCommandBot remains in your server. Removing the main bot will prevent you from accessing the dashboard and managing your custom bot.
+::: warning Important
+Do not kick the main bot to keep dashboard access.
+:::

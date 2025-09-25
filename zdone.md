@@ -29,6 +29,8 @@
   - [x] troubleshooting
   - [x] curl format
   - [x] welcomer
+  - [x] embed builder
+  - [x] custom bot
 - [ ] Triggers
 - [x] Tutorials
   - [x] ping

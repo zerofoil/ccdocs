@@ -16,21 +16,23 @@ const props = defineProps({
         default: ""
     }
 });
-const { isDark } = useData();
+// const { isDark } = useData();
 const image = withBase(props.src);
+/*
 const dark = image.slice(0, -4) + "-dark.png";
 
 const img = computed(() => {
     return isDark.value ? dark : image;
 });
+*/
 </script>
 
 <template>
-    <img :src="img" alt="" class="theme-image" :height="height" :width="width"/>
+    <img :src="image" alt="" class="custom-image" :height="height" :width="width"/>
 </template>
 
 <style>
-.theme-image {
+.custom-image {
     border-radius: 8px;
 }
 </style>

@@ -21,24 +21,24 @@ import {
     Buttons,
     Button,
 
-    ThemeImage,
+    Pic,
 } from "./components";
 
 import Cooldowns from "./Cooldowns.vue";
 
 import {
-  DiscordButton,
-  DiscordButtons,
-  DiscordEmbed,
-  DiscordEmbedField,
-  DiscordEmbedFields,
-  DiscordInteraction,
-  DiscordMarkdown,
-  DiscordMention,
-  DiscordMessage,
-  DiscordMessages,
-  DiscordReaction,
-  DiscordReactions,
+    DiscordButton,
+    DiscordButtons,
+    DiscordEmbed,
+    DiscordEmbedField,
+    DiscordEmbedFields,
+    DiscordInteraction,
+    DiscordMarkdown,
+    DiscordMention,
+    DiscordMessage,
+    DiscordMessages,
+    DiscordReaction,
+    DiscordReactions,
 } from "@discord-message-components/vue";
 
 import "@discord-message-components/vue/dist/style.css";
@@ -79,6 +79,6 @@ export default {
         app.component("Button", Button);
 
         app.component("Cooldown", Cooldowns);
-        app.component("Pic", ThemeImage);
+        app.component("Pic", Pic);
     }
 } satisfies Theme
